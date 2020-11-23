@@ -56,11 +56,21 @@ a.nav-item:hover{
 #bt-cadastrar{
 	text-align: right; 
 	padding: 0px 15px 0px 0px;
+
 }
 
 #bt-buscar{
 	text-align: left; 
 	padding: 0px 0px 0px 15px;
+}
+
+
+.mensagem h4{
+	height:15px;
+	font-size: 18px; 
+	font-style:italic;
+	font-weight: bold;
+	text-align: center;
 }
 
 
@@ -78,6 +88,10 @@ a.nav-item:hover{
 
 .limpar{
 	clear: both;
+}
+
+.pj-section {
+
 }
 
 .sombra{
@@ -99,9 +113,8 @@ a.nav-item:hover{
 	text-align: center; 
 }
 
-
 .container{
-	margin-top: 50px;
+	margin-top: 20px;
 }
 
 .bt-salvar-voltar{
@@ -109,7 +122,24 @@ a.nav-item:hover{
 }
 
 .bt-salvar-voltar button{
-	width: 180px;
+	width: 140px;
+}
+
+/** tela de listagem de alunos **/
+
+.container-tr {
+	font-size: 14px;
+}
+
+.container-btn-manutencao {
+	width: 165px;
+	color: #fff ;
+}
+.container-btn-manutencao .bt-manutencao{
+	width: 68px;
+	height: 21px; 
+	padding: 0px 0px 0px 0px;
+	font-size: 12px;
 }
 
 
