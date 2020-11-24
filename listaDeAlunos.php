@@ -9,9 +9,8 @@
 ?>
 
 
-
-<div class="container">	
-		<h3> Listagem de Alunos</h3>
+<div class="container-listagem">	
+		<h4 class ="offset-md-1"> Listagem de Alunos</h4>
 		<hr>
 		<table class="table table-bordered table-hover">
 			<thead>

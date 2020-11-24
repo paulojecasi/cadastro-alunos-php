@@ -5,22 +5,29 @@
 	box-sizing: border-box;
 }
 
-nav{
+.cabecalho{
+	height: 60px; 
 	background-color: #A9A9A9;
-	height: 90px; 
 	color:#ffffff;
 	text-transform: uppercase;  
 }
 
-nav a{
+.logo img{
+	height: 100px;
+	width: 230px; 
+}
+.cabecalho a{
 	cursor: pointer; 
 	font-weight: bold;	
+	font-size: 14px;
+	color: #fff;
 }
 
-a.nav-item:hover{
+.cabecalho a.nav-item:hover{
 	color: #000080;
-	
 }
+
+/* ---------------------- INDEX.PHP-------------------------------*/
 
 .pj-section{
 /* 	background: url(img/bg-index.jpg); */
@@ -29,8 +36,9 @@ a.nav-item:hover{
 	background-position: center;
 	background-repeat: no-repeat; 
 	width: 100%;
-	padding: 30px;
+	padding: 70px;
 	position: relative; 
+
 	
 }
 
@@ -61,7 +69,7 @@ a.nav-item:hover{
 
 #bt-buscar{
 	text-align: left; 
-	padding: 0px 0px 0px 15px;
+	padding: 0px 0px 0px 0px;
 }
 
 
@@ -69,6 +77,16 @@ a.nav-item:hover{
 	height:15px;
 	font-size: 18px; 
 	font-style:italic;
+	font-weight: bold;
+	text-align: center;
+}
+
+.mensagem-campos div h4{
+
+	height:10px;
+	font-size: 11px; 
+	font-style:italic;
+	color: #F08080;
 	font-weight: bold;
 	text-align: center;
 }
@@ -113,8 +131,21 @@ a.nav-item:hover{
 	text-align: center; 
 }
 
-.container{
-	margin-top: 20px;
+/* ------------ Cadastro de Alunos ------------------------------*/
+.container-mensagem{
+	margin-top: 70px;
+}
+
+.container-cadastro{
+	margin-top: 70px;
+}
+
+.arquivo{
+	font-size: 14px;
+	color: #2F4F4F;
+}
+.bt-foto{
+	margin-left: 50px;
 }
 
 .bt-salvar-voltar{
@@ -125,7 +156,11 @@ a.nav-item:hover{
 	width: 140px;
 }
 
-/** tela de listagem de alunos **/
+/**----------------------- tela de listagem de alunos--------------- **/
+
+.container-listagem {
+	margin-top: 70px;
+}
 
 .container-tr {
 	font-size: 14px;

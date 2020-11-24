@@ -19,9 +19,9 @@
 
 </head>
 <body>
-	<header> 
-		<nav class="navbar navbar-expand-lg navbar-dark">
-			<a class="navbar-brand" >
+	<header class="fixed-top"> 
+		<nav class="cabecalho navbar navbar-expand-lg navbar-dark">
+			<a class="logo navbar-brand" >
 		 		<!-- <img src="/static/img/logo-header-site.png"/> -->
 		 		<?php
 		 		  	echo "<img src='static/img/logo-header-site.png'/>";
