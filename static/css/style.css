@@ -81,17 +81,6 @@
 	text-align: center;
 }
 
-.mensagem-campos div h4{
-
-	height:10px;
-	font-size: 11px; 
-	font-style:italic;
-	color: #F08080;
-	font-weight: bold;
-	text-align: center;
-}
-
-
 
 .pj-container{
 	max-width: 1280px;
@@ -132,9 +121,20 @@
 }
 
 /* ------------ Cadastro de Alunos ------------------------------*/
-.container-mensagem{
+.mens-cadastro{
 	margin-top: 70px;
 }
+
+.mens-upload{
+	font-size: 14px;
+	text-align: center;
+}
+
+.mensagem-campos div h3{
+	font-size: 14px;
+	text-align: center; 
+}
+
 
 .container-cadastro{
 	margin-top: 70px;

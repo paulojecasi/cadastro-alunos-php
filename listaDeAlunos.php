@@ -32,7 +32,9 @@
 						
 					
 						<td class="container-btn-manutencao">
-							<a class="btn btn-primary bt-manutencao"> 
+							<a class="btn btn-primary bt-manutencao"
+								href="editarDadosAluno.php?id=
+									<?php echo $dados_aluno['id']; ?>"> 
 								<i class="fas fa-edit"></i> 
 								Editar 
 							</a>

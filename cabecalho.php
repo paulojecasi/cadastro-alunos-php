@@ -13,6 +13,8 @@
 	<!-- meu js -->
 	<script src="static/js/myscripts.js"> </script>
 	<script src="https://kit.fontawesome.com/006642858d.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap" rel="stylesheet">
 
 	<title> MANUTENÇÂO DE ALUNOS </title>

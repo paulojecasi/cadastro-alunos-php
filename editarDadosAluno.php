@@ -3,16 +3,16 @@
 <body>
 
 <?php
-	session_start();
 	require_once 'cabecalho.php';
 	require_once 'enums.php';
 	require_once 'mensagens/mens_cadastro.php';
+	require_once 'dados/consulta_dados_id.php'; 
 ?>
 
 
 <div class="container-cadastro">
 
-	<h4 class = "offset-md-1">+ Inserir Alunos </h4>
+	<h4 class = "offset-md-1"> Editando Dados do Aluno </h4>
 	<hr>
 
 	<?php 	//-------- Aqui veremos se os campos obrigatorios foram preenchido
@@ -38,19 +38,19 @@
 
 	<!------------------- 	Nome do Aluno --------------------------->
 
-	<form method="POST" action="dados/grava_dados.php">
+	<form method="POST" action="dados/altera_dados.php" >
 		<div class="row">
 			<div class="col-md-6 form-group offset-md-2"> 
 				<label> Nome do Aluno: </label>
 				<input class="form-control" placeholder="Ex: Evelyn Cardoso"
-						name="nome" required>
+						name="nome" 
+						value = "<?php echo $nome_edit; ?>"
+						required>
 			</div>
 
 		</div>
 		
 
-
-		
 		<!-- 				Tipo de Curso ---------------------------->
 		
 		<div class="row">
@@ -58,12 +58,19 @@
 				<label> Selecione o Curso: </label>
 				<select class="form-control" name="curso"> 
 
-					<?php foreach ($tipo_curso as $curso): ?>
-						<option value = "<?php echo $curso ?>">
-						 	<?php echo $curso ?> 
-						</option>
-					<?php endforeach; ?> 
-					 
+					<option value = "<?php echo $curso_edit ?>">
+						<?php echo $curso_edit ?>
+					</option>
+
+					<?php
+					foreach ($tipo_curso as $curso): 
+						if ($curso != $curso_edit):   // para nao repetir o enum 
+							echo "<option value = $curso >";
+						 	echo  	$curso; 
+							echo "</option>";
+						endif;
+					endforeach;
+					?>
 				
 				</select>
 			</div>
@@ -75,37 +82,33 @@
 			<div class="col-md-6 form-group offset-md-2"> 
 				<label> Matricula: </label>
 				<input class="form-control" id="matricula" 
-						readonly=“true” name="matricula" required>
-				<button class= "btn btn-dark"
-						style="margin-top: 10px"
-						type = "button"
-						onclick="GerarMatricula();"> 
-						Gerar Matricula
-				</button>
+						readonly=“true” name="matricula"
+						value = "<?php echo $matricula_edit; ?>"
+						required>
+
 			</div>
 		</div>
 
-		<div class="col-md-8 form-group offset-md-1 mensagem-campos">
-			<?php 	//-------- Aqui testa se o campo foi preenchido 
-
-			if (isset($_SESSION['matricula'])): ?>
-				<div>
-					<h4> <?php echo $_SESSION['matricula']; ?> </h4>
-				</div>	
-			<?php
-			endif;
-			?>
-		</div>
 		
 		<!-- 				Status -->
 		<div class="row">
 			<div class="col-md-6 form-group offset-md-2"> 
 				<label> Status: </label>
 				<select class="form-control" name="status"> 
-					<?php foreach ($status as $st): ?>
-						<option value = "<?php echo $st ?>">
-						 	<?php echo $st ?> </option>
-						<?php endforeach; ?> 
+
+					<option value = "<?php echo $status_edit ?>">
+						<?php echo $status_edit ?>
+					</option>
+
+					<?php
+					foreach ($status as $st): 
+						if ($st != $status_edit):   // para nao repetir o enum 
+							echo "<option value = $st >";
+						 	echo  	$st; 
+							echo "</option>";
+						endif;
+					endforeach;
+					?>
 				
 				</select>
 			</div>
@@ -116,10 +119,20 @@
 			<div class="col-md-6 form-group offset-md-2"> 
 				<label> Turno: </label>
 				<select class="form-control" name="turno"> 
-					<?php foreach ($turno as $tr): ?>
-						<option value="<?php echo $tr ?>"> 
-							<?php echo $tr ?> </option>
-						<?php endforeach; ?> 
+
+					<option value = "<?php echo $turno_edit ?>">
+						<?php echo $turno_edit ?>
+					</option>
+
+					<?php
+					foreach ($turno as $tn): 
+						if ($tn != $turno_edit):   // para nao repetir o enum 
+							echo "<option value = $tn >";
+						 	echo  	$tn; 
+							echo "</option>";
+						endif;
+					endforeach;
+					?>
 				
 				</select>
 			</div>
@@ -128,10 +141,10 @@
 		<div class="row bt-salvar-voltar">
 			<button type="submit" class="botao-form btn btn-success offset-md-3"
 				name = "botao-salvar" href="#" onClick="selector()">
-			 	Salvar
+			 	Salvar Alterações
 			 </button>
 			 
-			 <a href="index.php"> 
+			 <a href="listaDeAlunos.php"> 
 			 	<button type="button" class="botao-form btn btn-outline-danger offset-md-1">
 			 		Voltar
 			 	</button>
