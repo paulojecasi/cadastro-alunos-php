@@ -79,7 +79,7 @@
 		<!-- 				Gerar Matricula ------------------------------->
 
 		<div class="row">
-			<div class="col-md-6 form-group offset-md-2"> 
+			<div class="col-md-4 form-group offset-md-2"> 
 				<label> Matricula: </label>
 				<input class="form-control" id="matricula" 
 						readonly=“true” name="matricula"

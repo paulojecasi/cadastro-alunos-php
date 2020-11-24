@@ -49,8 +49,6 @@
 		</div>
 		
 
-
-		
 		<!-- 				Tipo de Curso ---------------------------->
 		
 		<div class="row">
@@ -58,13 +56,14 @@
 				<label> Selecione o Curso: </label>
 				<select class="form-control" name="curso"> 
 
-					<?php foreach ($tipo_curso as $curso): ?>
-						<option value = "<?php echo $curso ?>">
-						 	<?php echo $curso ?> 
-						</option>
-					<?php endforeach; ?> 
+					<?php  // enum CURSO 
+					foreach ($tipo_curso as $curso): 
+						echo "<option value = $curso >";
+					 	echo  	$curso; 
+						echo "</option>";
+					endforeach;
+					?>
 					 
-				
 				</select>
 			</div>
 		</div>
@@ -72,7 +71,7 @@
 		<!-- 				Gerar Matricula ------------------------------->
 
 		<div class="row">
-			<div class="col-md-6 form-group offset-md-2"> 
+			<div class="col-md-4 form-group offset-md-2"> 
 				<label> Matricula: </label>
 				<input class="form-control" id="matricula" 
 						readonly=“true” name="matricula" required>
@@ -85,27 +84,20 @@
 			</div>
 		</div>
 
-		<div class="col-md-8 form-group offset-md-1 mensagem-campos">
-			<?php 	//-------- Aqui testa se o campo foi preenchido 
-
-			if (isset($_SESSION['matricula'])): ?>
-				<div>
-					<h4> <?php echo $_SESSION['matricula']; ?> </h4>
-				</div>	
-			<?php
-			endif;
-			?>
-		</div>
 		
 		<!-- 				Status -->
 		<div class="row">
 			<div class="col-md-6 form-group offset-md-2"> 
 				<label> Status: </label>
 				<select class="form-control" name="status"> 
-					<?php foreach ($status as $st): ?>
-						<option value = "<?php echo $st ?>">
-						 	<?php echo $st ?> </option>
-						<?php endforeach; ?> 
+
+					<?php  // enum STATUS
+					foreach ($status as $st): 
+						echo "<option value = $st >";
+					 	echo  	$st; 
+						echo "</option>";
+					endforeach;
+					?>
 				
 				</select>
 			</div>
@@ -116,10 +108,14 @@
 			<div class="col-md-6 form-group offset-md-2"> 
 				<label> Turno: </label>
 				<select class="form-control" name="turno"> 
-					<?php foreach ($turno as $tr): ?>
-						<option value="<?php echo $tr ?>"> 
-							<?php echo $tr ?> </option>
-						<?php endforeach; ?> 
+
+					<?php    // enum TURNO 
+					foreach ($turno as $tr): 
+						echo "<option value = $tr >";
+					 	echo  	$tr; 
+						echo "</option>";
+					endforeach;
+					?>
 				
 				</select>
 			</div>
