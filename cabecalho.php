@@ -1,22 +1,32 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
-	<link 	rel="stylesheet" 
-			href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
-			integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
 
 	<!-- meu css --> 
 	<link rel="stylesheet" href="static/css/style.css">
 
+	<!-- jquery 
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	-->
+
+	<!-- bootstrap-->
+	<link 	rel="stylesheet" 
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+			integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!-- jquery Local -->
+	<script src="static/js/jquery-3.5.1.min.js"> </script>
+	
 	<!-- meu js -->
 	<script src="static/js/myscripts.js"> </script>
-	<script src="https://kit.fontawesome.com/006642858d.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Ubuntu&family=Work+Sans&display=swap" rel="stylesheet">
 
+
+	<!-- para icones  -->
+	<script src="https://kit.fontawesome.com/006642858d.js"></script>
+
+	
 	<title> MANUTENÇÂO DE ALUNOS </title>
 
 </head>

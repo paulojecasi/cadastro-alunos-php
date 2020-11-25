@@ -4,6 +4,7 @@ function GerarMatricula(){
 	document.getElementById('matricula').value = (txt + aleatorio);
 }
 
+/*
 function selector() {
   $(".alert").fadeTo(1, 1).removeClass('hidden');
   window.setTimeout(function() {
@@ -12,3 +13,16 @@ function selector() {
     });
   }, 1000); 
 }
+*/
+
+$('#form-aluno').submit(function(ev){
+	ev.preventDefault();
+
+	var name_jq = $('#nome').val(); 
+	console.log(name_jq);
+
+});
+
+$('#form-foto').submit(function(ev){
+	ev.preventDefault();
+});

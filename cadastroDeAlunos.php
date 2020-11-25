@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <body>
 
 <?php
@@ -21,7 +21,7 @@
 
 	<!-------------------UPLOADS de Foto do Aluno --------------------------->
 	<div class= "row offset-md-2">
-		<form action="dados/upload.php" method="POST"
+		<form id = "form-foto" action="dados/upload.php" method="POST"
 				enctype="multipart/form-data"> 
 			<label> Adicione uma Foto do Aluno: </label> <br>
 			<input class = "arquivo btn btn-light" type="file" name="arquivo"> 
@@ -38,12 +38,13 @@
 
 	<!------------------- 	Nome do Aluno --------------------------->
 
-	<form method="POST" action="dados/grava_dados.php">
+	<form id="form-aluno" method="POST" action="dados/grava_dados.php">
 		<div class="row">
 			<div class="col-md-6 form-group offset-md-2"> 
 				<label> Nome do Aluno: </label>
-				<input class="form-control" placeholder="Ex: Evelyn Cardoso"
-						name="nome" required>
+
+				<input id="nome" class="form-control" placeholder="Ex: Evelyn Cardoso"
+						name="nome" required="true">
 			</div>
 
 		</div>
@@ -74,7 +75,8 @@
 			<div class="col-md-4 form-group offset-md-2"> 
 				<label> Matricula: </label>
 				<input class="form-control" id="matricula" 
-						readonly=“true” name="matricula" required>
+						name="matricula" required="true">
+
 				<button class= "btn btn-dark"
 						style="margin-top: 10px"
 						type = "button"
@@ -123,7 +125,7 @@
 		
 		<div class="row bt-salvar-voltar">
 			<button type="submit" class="botao-form btn btn-success offset-md-3"
-				name = "botao-salvar" href="#" onClick="selector()">
+				name = "botao-salvar">
 			 	Salvar
 			 </button>
 			 
@@ -142,5 +144,6 @@
 	session_unset();
 	require_once 'rodape.php';
 ?>
+
 </body>
 </html>

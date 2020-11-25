@@ -156,6 +156,11 @@
 	width: 140px;
 }
 
+#matricula{
+	pointer-events: none;
+	outline: none;
+}
+
 /**----------------------- tela de listagem de alunos--------------- **/
 
 .container-listagem {

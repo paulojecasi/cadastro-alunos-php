@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <body>
 
 <?php
@@ -38,7 +38,8 @@
 
 	<!------------------- 	Nome do Aluno --------------------------->
 
-	<form method="POST" action="dados/altera_dados.php" >
+	<form method="POST" action="dados/grava_dados.php" >
+		<input name="id" type="hidden" value="<?php echo $id; ?>">
 		<div class="row">
 			<div class="col-md-6 form-group offset-md-2"> 
 				<label> Nome do Aluno: </label>
@@ -140,8 +141,8 @@
 		
 		<div class="row bt-salvar-voltar">
 			<button type="submit" class="botao-form btn btn-success offset-md-3"
-				name = "botao-salvar" href="#" onClick="selector()">
-			 	Salvar Alterações
+				name = "botao-atualizar" href="#" onClick="selector()">
+			 	Atualizar
 			 </button>
 			 
 			 <a href="listaDeAlunos.php"> 
